@@ -29,6 +29,7 @@ export default function AuditModal({ isOpen, onClose, onSubmitSuccess }: AuditMo
     try {
       await fetch('https://script.google.com/macros/s/AKfycbzyzzwyYURcLufpVw2ybBAMVnCXpPuHup-9TzWZWCZB6YsjoCyIsu8TuauPut2YmxGf/exec', {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },

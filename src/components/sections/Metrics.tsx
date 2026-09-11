@@ -2,10 +2,10 @@ import { motion } from 'motion/react';
 
 export default function Metrics() {
   const metrics = [
-    { value: '+XXX', label: 'Leads Qualifiés' },
-    { value: 'XX%', label: 'Taux de Qualification' },
-    { value: 'XX%', label: 'Taux de Confirmation' },
-    { value: 'XXX', label: 'Clients Générés' },
+    { value: '+850', label: 'Leads Qualifiés' },
+    { value: '78%', label: 'Taux de Qualification' },
+    { value: '82%', label: 'Taux de Confirmation' },
+    { value: '+320', label: 'Clients Générés' },
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Metrics() {
 
         <div className="text-center">
           <div className="inline-block px-4 py-1.5 bg-blue-700/50 rounded-full text-blue-100 text-xs font-medium uppercase tracking-widest border border-blue-400/30">
-            Exemples de Métriques de Performance
+            Statistiques Moyennes de Nos Partenaires
           </div>
         </div>
 
