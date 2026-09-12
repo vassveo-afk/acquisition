@@ -48,7 +48,7 @@ export default function ThankYou({ onBack }: ThankYouProps) {
           </button>
           
           <a
-            href="https://wa.me/212600000000"
+            href="https://wa.me/212700730710"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#20bd5a] font-medium px-6 py-3 rounded-xl transition-all shadow-lg shadow-green-600/20 w-full sm:w-auto justify-center"

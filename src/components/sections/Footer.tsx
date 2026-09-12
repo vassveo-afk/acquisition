@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="w-2 h-2 bg-white rounded-sm"></div>
           </div>
           <span className="text-white font-bold tracking-tight">
-            Acquisition<span className="text-slate-400 font-normal">.ma</span>
+            GRABB
           </span>
         </div>
 
@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div>
-          © {new Date().getFullYear()} Agence d'Acquisition Client. Tous droits réservés.
+          © {new Date().getFullYear()} GRABB. Tous droits réservés.
         </div>
       </div>
     </footer>

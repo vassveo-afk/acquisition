@@ -36,7 +36,7 @@ export default function Navbar({ onOpenAudit }: NavbarProps) {
             <div className="w-3 h-3 bg-white rounded-sm"></div>
           </div>
           <span className="text-white font-bold text-xl tracking-tight group-hover:text-blue-400 transition-colors">
-            Acquisition<span className="text-slate-400 font-normal">.ma</span>
+            GRABB
           </span>
         </a>
 

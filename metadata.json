@@ -1,5 +1,5 @@
 {
-  "name": "Agence d'Acquisition Client",
+  "name": "GRABB",
   "description": "Systèmes d'acquisition premium pour les entreprises marocaines. Nous livrons des clients qualifiés et confirmés.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
