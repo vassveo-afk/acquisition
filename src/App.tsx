@@ -4,6 +4,7 @@
  */
 
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/sections/Navbar';
 import Hero from './components/sections/Hero';
 import Problem from './components/sections/Problem';
@@ -21,17 +22,11 @@ import AuditModal from './components/ui/AuditModal';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import ThankYou from './components/sections/ThankYou';
 
-export default function App() {
+function LandingPage() {
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const openAudit = () => setIsAuditModalOpen(true);
   const closeAudit = () => setIsAuditModalOpen(false);
-  const handleSubmissionSuccess = () => setIsSubmitted(true);
-
-  if (isSubmitted) {
-    return <ThankYou onBack={() => setIsSubmitted(false)} />;
-  }
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-200">
@@ -54,7 +49,16 @@ export default function App() {
       <Footer />
       
       <WhatsAppButton />
-      <AuditModal isOpen={isAuditModalOpen} onClose={closeAudit} onSubmitSuccess={handleSubmissionSuccess} />
+      <AuditModal isOpen={isAuditModalOpen} onClose={closeAudit} />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/thank-you" element={<ThankYou />} />
+    </Routes>
   );
 }

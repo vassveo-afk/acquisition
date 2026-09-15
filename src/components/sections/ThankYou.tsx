@@ -1,10 +1,15 @@
 import { CheckCircle, ArrowLeft, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-interface ThankYouProps {
-  onBack: () => void;
-}
+export default function ThankYou() {
+  useEffect(() => {
+    // Trigger Facebook Pixel Lead event when reaching this page
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
+  }, []);
 
-export default function ThankYou({ onBack }: ThankYouProps) {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 selection:bg-blue-200">
       <div className="max-w-2xl w-full bg-white rounded-3xl shadow-xl border border-slate-100 p-8 sm:p-16 text-center">
@@ -39,13 +44,13 @@ export default function ThankYou({ onBack }: ThankYouProps) {
         </div>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button 
-            onClick={onBack}
+          <Link 
+            to="/"
             className="flex items-center gap-2 text-slate-500 hover:text-slate-900 font-medium px-6 py-3 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Retour à l'accueil
-          </button>
+          </Link>
           
           <a
             href="https://wa.me/212700730710"

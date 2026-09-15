@@ -1,14 +1,15 @@
 import { X, Loader2 } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface AuditModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmitSuccess: () => void;
 }
 
-export default function AuditModal({ isOpen, onClose, onSubmitSuccess }: AuditModalProps) {
+export default function AuditModal({ isOpen, onClose }: AuditModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
@@ -39,8 +40,8 @@ export default function AuditModal({ isOpen, onClose, onSubmitSuccess }: AuditMo
       console.error("Erreur lors de l'envoi :", error);
     } finally {
       setIsSubmitting(false);
-      onSubmitSuccess();
       onClose();
+      navigate('/thank-you');
     }
   };
 
